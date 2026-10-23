@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const moviesRouter = require('./movies')
-const PORT = 8801
+const PORT = 3000
 
 app.use(express.json())
 
@@ -17,6 +17,7 @@ app.listen(PORT, (error) => {
         console.log('Something went wront...')
         console.log(error)
     } else {
+        console.log(`port ${PORT} is running`)
         console.log(`The server is running on http://localhost:${PORT}`)
     }
 })

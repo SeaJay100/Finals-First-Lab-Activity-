@@ -4,7 +4,7 @@ const router = express.Router()
 const movies = [
     {
         id: 1,
-        title: 'Spider-Man Brand New Day'
+        title: 'Spider-Man: Brand New Day'
     },
     {
         id: 2,
@@ -22,8 +22,8 @@ router.get('/', (req, res) => {
 
 router.get('/:id', (req, res) => {
     const id = Number(req.params.id)
-    const findMovies = movies.find((movie) => movie.id === id)
-    res.json(findMovies)
+    const findMovie = movies.find((movie) => movie.id === id)
+    res.json(findMovie)
 })
 
 router.post('/', (req, res) => {
@@ -35,4 +35,22 @@ router.post('/', (req, res) => {
     res.send(movie)
 })
 
+
+router.put('/:id', (req, res) => {
+    const id = Number(req.params.id)
+    const findMovie = movies.find((movie) => movie.id === id)
+
+    findMovie.title = req.body.title
+    res.send(findMovie)
+})
+
+router.delete('/:id', (req, res) => {
+    const id = Number(req.params.id)
+    const findMovie = movies.find((movie) => movie.id === id)
+
+    const index = movies.indexOf(findMovie)
+    movies.splice(index, 1)
+
+    res.send(findMovie)
+})
 module.exports = router
