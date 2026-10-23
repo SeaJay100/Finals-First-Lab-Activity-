@@ -1,0 +1,24 @@
+{
+  "name": "finalslabact",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SeaJay100/Finals-First-Lab-Activity-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/SeaJay100/Finals-First-Lab-Activity-/issues"
+  },
+  "homepage": "https://github.com/SeaJay100/Finals-First-Lab-Activity-#readme",
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}
